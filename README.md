@@ -1,6 +1,6 @@
 
 # This is not for production
-# Laravel admin dashboard practive with Livewire
+# Laravel admin dashboard practice with Livewire
 
 # This is not for production
 # This is not for production
