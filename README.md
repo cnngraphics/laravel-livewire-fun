@@ -1,6 +1,7 @@
 
 # This is not for production
-# This is not for production
+# Laravel admin dashboard practive with Livewire
+
 # This is not for production
 # This is not for production
 
