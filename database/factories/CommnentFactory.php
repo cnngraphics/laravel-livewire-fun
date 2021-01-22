@@ -2,7 +2,7 @@
 
 namespace Database\Factories;
 
-use App\Models\Commnent;
+use App\Models\Comment;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class CommnentFactory extends Factory
@@ -12,7 +12,7 @@ class CommnentFactory extends Factory
      *
      * @var string
      */
-    protected $model = Commnent::class;
+    protected $model = Comment::class;
 
     /**
      * Define the model's default state.
@@ -22,7 +22,8 @@ class CommnentFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'body' => $this->faker->sentence(10),
+            'user_id'=>1,
         ];
     }
 }
