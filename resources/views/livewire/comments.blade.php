@@ -7,7 +7,7 @@
                     <h1 class="font-normal text-3xl text-grey-darkest bg-teal leading-loose my-3 w-full">Add Comment: {{$count}}</h1>
                     <div class="w-full text-center">
 
-                        <form wire:submit.prevent="addComment">
+                        <form wire:submit.prevent="addComment" >
                             <div class="max-w-sm mx-auto p-1 pr-0 flex items-center">
                                 <input type="text"
 {{--                                       wire:model.debounce.800ms="newComment"--}}
@@ -20,7 +20,7 @@
                                 text-base font-semibold tracking-wide uppercase p-3 rounded
                                 shadow hover:bg-indigo-light"
 
-                                >Add Comment</button>
+                                >Add Comment </button>
                             </div>
                         </form>
 
