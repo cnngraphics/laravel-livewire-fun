@@ -6,7 +6,7 @@
                 <div class="text-center">
                     <h1 class="font-normal text-3xl text-grey-darkest bg-teal leading-loose my-3 w-full">Add Comment: {{$count}}</h1>
                     <div class="w-full text-center">
-                        <form action="#">
+
                             <div class="max-w-sm mx-auto p-1 pr-0 flex items-center">
                                 <input type="text"
                                        wire:model="newComment" name="comment" placeholder="Your Comment here" class="flex-1 appearance-none rounded shadow p-3 text-grey-dark mr-2 focus:outline-none">
@@ -16,7 +16,7 @@
                                 wire:click="addComment"
                                 >Add Comment</button>
                             </div>
-                        </form>
+
                     </div>
                 </div>
             </div>
