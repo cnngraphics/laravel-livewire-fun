@@ -27,7 +27,7 @@ class Comments extends Component
             'author' => 'Bob'
 
         ]);
-        $this->newComment ='';
+        $this->reset('newComment');
         $this->increment();
     }
 
