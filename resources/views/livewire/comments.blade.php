@@ -7,19 +7,22 @@
                     <h1 class="font-normal text-3xl text-grey-darkest bg-teal leading-loose my-3 w-full">Add Comment: {{$count}}</h1>
                     <div class="w-full text-center">
 
+                        <form wire:submit.prevent="addComment">
                             <div class="max-w-sm mx-auto p-1 pr-0 flex items-center">
                                 <input type="text"
 {{--                                       wire:model.debounce.800ms="newComment"--}}
 {{--                                       wire:model.lazy="newComment"--}}
                                        wire:model.defer="newComment"
 
-                                       name="comment" placeholder="Your Comment here" class="flex-1 appearance-none rounded shadow p-3 text-grey-dark mr-2 focus:outline-none">
+                                       name="comment" placeholder="Your Comment here"
+                                       class="flex-1 appearance-none rounded shadow p-3 text-grey-dark mr-2 focus:outline-none">
                                 <button type="submit" class="appearance-none bg-indigo text-white
                                 text-base font-semibold tracking-wide uppercase p-3 rounded
                                 shadow hover:bg-indigo-light"
-                                wire:click="addComment"
+
                                 >Add Comment</button>
                             </div>
+                        </form>
 
                     </div>
                 </div>
