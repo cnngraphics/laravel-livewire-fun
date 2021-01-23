@@ -5,7 +5,7 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 use Carbon\Carbon;
 
-class CreateCommnentsTable extends Migration
+class CreateCommentsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,7 +14,7 @@ class CreateCommnentsTable extends Migration
      */
     public function up()
     {
-        Schema::create('commnents', function (Blueprint $table) {
+        Schema::create('comments', function (Blueprint $table) {
             $table->id();
             $table->unsignedInteger('user_id');
             $table->string('body');
@@ -29,6 +29,6 @@ class CreateCommnentsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('commnents');
+        Schema::dropIfExists('comments');
     }
 }

@@ -10,15 +10,7 @@ class Comments extends Component
     public $count= 1;
     public $newComment;
 
-    public $comments = [
-        [
-            'body' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium asperiores.',
-            'created_at' => '3 minutes ago',
-            'author' => 'Theo'
-
-        ]
-
-    ];
+    public $comments;
 
     public function addComment() {
         if($this->newComment =='') return;
@@ -26,26 +18,29 @@ class Comments extends Component
         array_unshift($this->comments, [
             'body' => $this->newComment,
             'created_at' => Carbon::now()->diffForHumans(),
-            'author' => 'Bob'
+            'author' => 'Mike'
 
         ]);
         $this->reset('newComment');
         $this->increment();
     }
 
-    public function increment() {
-        $this->count++;
+    public function mount( $initialComments ) {
+
+//        dd($comments);
+        $this->comments = $initialComments;
     }
-
-
-
-    public function decrement(){
-        $this->count --;
-    }
-
 
     public function render()
     {
         return view('livewire.comments');
+    }
+
+    public function increment() {
+        $this->count++;
+    }
+
+    public function decrement(){
+        $this->count --;
     }
 }

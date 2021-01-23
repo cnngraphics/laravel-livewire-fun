@@ -141,7 +141,9 @@
         </nav>
         <div class="px-16 py-4 text-gray-700 bg-gray-200 h-screen w-screen">
 
-            @livewire('comments')
+{{--            @livewire('comments')--}}
+{{--            <livewire:comments comments="I am props from blade"/>--}}
+            <livewire:comments :initialComments="$comments" />
 
         </div>
     </div>
