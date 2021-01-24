@@ -143,7 +143,7 @@
 
 {{--            @livewire('comments')--}}
 {{--            <livewire:comments comments="I am props from blade"/>--}}
-            <livewire:comments :initialComments="$comments" />
+            <livewire:comments  />
 
         </div>
     </div>

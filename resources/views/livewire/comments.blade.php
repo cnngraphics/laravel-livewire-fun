@@ -34,7 +34,6 @@
 
                             <p class="text-gray-500">{{ $comment->body  }}</p>
                             <p class="text-gray-500 pt-4"> {{ $comment->created_at }}</p>
-
                             <div class="text-xl font-medium text-black">{{ $comment->author }}</div>
 
                         </div>
