@@ -15,16 +15,19 @@ class Comments extends Component
     public function addComment() {
         if($this->newComment =='') return;
 
-        $createdComment = Comment::create(['body'=> $this->newComment, 'user_id'=>1]);
+        $createdComment = Comment::create([
+            'body'=> $this->newComment,
+            'user_id'=>1
+        ]);
 
-        $this->comments->push( $createdComment );
+        $this->comments->prepend( $createdComment );
 
         $this->reset('newComment');
         $this->increment();
     }
 
     public function mount( ) {
-        $initialComments = Comment::All();
+        $initialComments = Comment::All()->sortByDesc('id');
 
         $this->comments = $initialComments;
 
