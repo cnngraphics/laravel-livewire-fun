@@ -29,12 +29,11 @@
             </div>
 
             @foreach($comments as $comment)
-                <div class="p-6 mb-10 max-w-lg mx-auto bg-white rounded-xl shadow-md flex items-center space-x-8">
+                <div class="p-3 mb-10 max-w-lg mx-auto bg-white rounded-xl shadow-md flex items-center space-x-8">
                         <div >
 
                             <p class="text-gray-500">{{ $comment->body  }}</p>
-                            <p class="text-gray-500 pt-4"> {{ $comment->created_at }}</p>
-                            <div class="text-xl font-medium text-black">{{ $comment->author }}</div>
+                            <p class="text-gray-500 pt-4"> {{ $comment->author }}: {{ $comment->created_at->diffForHumans() }}</p>
 
                         </div>
                 </div>

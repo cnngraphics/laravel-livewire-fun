@@ -2,7 +2,6 @@
 
 namespace App\Http\Livewire;
 use App\Models\Comment;
-use Carbon\Carbon;
 
 use Livewire\Component;
 
@@ -16,21 +15,21 @@ class Comments extends Component
     public function addComment() {
         if($this->newComment =='') return;
 
-        array_unshift(
-            $this->comments, [
-            'body' => $this->newComment,
-            'created_at' => Carbon::now()->diffForHumans(),
-            'author' => 'Mike'
+        $createdComment = Comment::create(['body'=> $this->newComment, 'user_id'=>1]);
 
-        ]);
+        $this->comments->push( $createdComment );
+
         $this->reset('newComment');
         $this->increment();
     }
 
     public function mount( ) {
         $initialComments = Comment::All();
+
+        $this->comments = $initialComments;
+
         $this->count = $initialComments->count();
-       $this->comments = $initialComments;
+
     }
 
     public function render()
